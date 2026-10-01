@@ -81,6 +81,13 @@ export default function Navbar({ theme, setTheme }) {
           </ul>
         </nav>
         <div className="flex gap-2 sm:gap-3 items-center">
+          <div className="flex items-center gap-2 sm:text-xl cursor-pointer sm:gap-3 border border-gray-600 hover:bg-[#5044e5] hover:text-white duration-300 rounded-full px-2 sm:px-3 py-2">
+            {theme === "light" ? (
+              <BiMoon onClick={() => setTheme("dark")} />
+            ) : (
+              <BiSun onClick={() => setTheme("light")} />
+            )}
+          </div>
           <button className="flex cursor-pointer items-center leading-none text-[10px] sm:text-[16px] gap-0.5 bg-[#5044e5] text-white px-2 sm:px-3 py-1.5 rounded-3xl">
             <span className="leading-none">Connect</span>
             <IoIosArrowRoundForward className="block text-sm sm:text-xl font-semibold" />

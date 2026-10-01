@@ -8,6 +8,6 @@
   font-weight: 500;
 }
 
-@theme {
+:root{
   --color-primary: #5044e5;
-};;
+};
