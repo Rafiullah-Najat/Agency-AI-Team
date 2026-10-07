@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
@@ -81,13 +81,6 @@ export default function Navbar({ theme, setTheme }) {
           </ul>
         </nav>
         <div className="flex gap-2 sm:gap-3 items-center">
-          <div className="flex items-center gap-2 sm:text-xl cursor-pointer sm:gap-3 border border-gray-600 hover:bg-[#5044e5] hover:text-white duration-300 rounded-full px-2 sm:px-3 py-2">
-            {theme === "light" ? (
-              <BiMoon onClick={() => setTheme("dark")} />
-            ) : (
-              <BiSun onClick={() => setTheme("light")} />
-            )}
-          </div>
           <button className="flex cursor-pointer items-center leading-none text-[10px] sm:text-[16px] gap-0.5 bg-[#5044e5] text-white px-2 sm:px-3 py-1.5 rounded-3xl">
             <span className="leading-none">Connect</span>
             <IoIosArrowRoundForward className="block text-sm sm:text-xl font-semibold" />
@@ -95,21 +88,37 @@ export default function Navbar({ theme, setTheme }) {
 
           <button
             type="button"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            className="grid size-9 place-items-center rounded-full text-slate-700 transition hover:bg-slate-100 dark:text-amber-300 dark:hover:bg-slate-800"
+          >
+            {theme === "dark" ? (
+              <BiSun className="size-5" />
+            ) : (
+              <BiMoon className="size-5" />
+            )}
+          </button>
+
+          <button
+            type="button"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="grid size-10 place-items-center rounded-lg text-slate-700 transition hover:bg-slate-50 xl:hidden"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            className="grid size-10 place-items-center rounded-lg text-slate-700 transition hover:bg-slate-50 dark:text-white dark:hover:bg-slate-800 xl:hidden"
           >
             <MenuIcon open={isMenuOpen} />
           </button>
         </div>
         <nav
-          className={`overflow-hidden absolute top-16 w-full left-0  z-100 border-t border-slate-100 bg-white transition-[max-height] duration-300 xl:hidden ${isMenuOpen ? "max-h-74" : "max-h-0 border-t-0"}`}
+          className={`overflow-hidden absolute top-16 w-full left-0 z-100 border-t border-slate-100 bg-white transition-[max-height] duration-300 dark:border-slate-700 dark:bg-gray-900 xl:hidden ${isMenuOpen ? "max-h-74" : "max-h-0 border-t-0"}`}
         >
           <ul className="text-gray-700 dark:text-white flex flex-col space-y-1 px-4 py-3">
             {navigation.map((item) => (
               <li
                 key={item.id}
                 onClick={() => setIsMenuOpen(false)}
-                className="block rounded-lg px-3 py-2 transition hover:bg-blue-50 hover:text-blue-600 "
+                className="block rounded-lg px-3 py-2 transition hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-800"
               >
                 <a href={`#${item.link}`}>{item.label}</a>
               </li>
