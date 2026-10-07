@@ -81,22 +81,26 @@ export default function Navbar({ theme, setTheme }) {
           </ul>
         </nav>
         <div className="flex gap-2 sm:gap-3 items-center">
-          <button className="flex cursor-pointer items-center leading-none text-[10px] sm:text-[16px] gap-0.5 bg-[#5044e5] text-white px-2 sm:px-3 py-1.5 rounded-3xl">
-            <span className="leading-none">Connect</span>
-            <IoIosArrowRoundForward className="block text-sm sm:text-xl font-semibold" />
-          </button>
-
           <button
             type="button"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            className="grid size-9 place-items-center rounded-full text-slate-700 transition hover:bg-slate-100 dark:text-amber-300 dark:hover:bg-slate-800"
+            className="grid size-9 place-items-center cursor-pointer rounded-full text-slate-700 transition hover:bg-slate-100 dark:text-amber-300 dark:hover:bg-slate-800"
           >
             {theme === "dark" ? (
               <BiSun className="size-5" />
             ) : (
               <BiMoon className="size-5" />
             )}
+          </button>
+          <button
+            type="button"
+            className="group inline-flex h-8 sm:h-10 cursor-pointer items-center gap-2 rounded-full bg-indigo-600 pl-4 pr-1.5 text-[12px] sm:text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 active:translate-y-0 focus-visi focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          >
+            <span>Connect</span>
+            <span className="grid size-5 sm:size-7 place-items-center rounded-full bg-white/10">
+              <IoIosArrowRoundForward className="size-5 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </span>
           </button>
 
           <button
