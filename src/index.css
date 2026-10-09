@@ -3,7 +3,39 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-* {
+:root {
   font-family: "Manrope", sans-serif;
+  line-height: 1.5;
   font-weight: 500;
-};
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f2f3f5;
+  color: #172033;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  transition: all 0.2s ease;
+}
