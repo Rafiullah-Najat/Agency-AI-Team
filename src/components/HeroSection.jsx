@@ -41,14 +41,14 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <h1 className="m-0 text-slate-900  font-semibold text-[clamp(1.5rem,5.5vw,12rem)] lg:leading-20 dark:text-white ">
+        <h1 className="m-0 text-slate-900  font-semibold text-[clamp(1.5rem,5.5vw,12rem)] lg:leading-23 dark:text-white ">
           <span className="block">Turning imagination into</span>
           <span className="block bg-linear-to-r from-indigo-600 via-blue-500 to-sky-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(92,126,255,0.12)]">
-            digital impact.
+            digital impact
           </span>
         </h1>
 
-        <p className="mx-auto text-[10px] mt-5 max-w-130 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg">
+        <p className="mx-auto text-[10px] mt-5 max-w-110 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg">
           Creating meaningful connections and turning big ideas into interactive
           digital experiences.
         </p>
