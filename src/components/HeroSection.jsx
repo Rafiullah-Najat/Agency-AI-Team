@@ -48,7 +48,7 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="mx-auto text-[10px] mt-5 max-w-110 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg">
+        <p className="mx-auto text-[10px] mt-5 max-w-130 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg">
           Creating meaningful connections and turning big ideas into interactive
           digital experiences.
         </p>
