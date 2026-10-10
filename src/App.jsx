@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import Companies from "./components/Companies";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -13,6 +14,7 @@ function App() {
     <div className="min-h-screen bg-[#f3f4f6] dark:bg-slate-950">
       <Navbar theme={theme} setTheme={setTheme} />
       <HeroSection />
+      <Companies />
     </div>
   );
 }
