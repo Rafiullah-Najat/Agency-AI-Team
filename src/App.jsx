@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Companies from "./components/Companies";
+import Services from "./components/Services";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -15,6 +16,7 @@ function App() {
       <Navbar theme={theme} setTheme={setTheme} />
       <HeroSection />
       <Companies />
+      <Services />
     </div>
   );
 }
