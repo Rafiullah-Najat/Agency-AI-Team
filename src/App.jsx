@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Companies from "./components/Companies";
 import Services from "./components/Services";
-
+import OurWork from "./components/OurWork";
 function App() {
   const [theme, setTheme] = useState("light");
 
@@ -17,6 +17,7 @@ function App() {
       <HeroSection />
       <Companies />
       <Services />
+      <OurWork />
     </div>
   );
 }
