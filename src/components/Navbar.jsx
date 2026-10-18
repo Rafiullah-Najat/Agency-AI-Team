@@ -73,7 +73,7 @@ export default function Navbar({ theme, setTheme }) {
             {navigation.map((item) => (
               <li
                 key={item.id}
-                className="relative cursor-pointer text-sm font-semibold pb-1.5 transition hover:text-blue-600 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:rounded-full after:bg-blue-600 after:transition-[width] after:duration-300 hover:after:w-full"
+                className="relative cursor-pointer text-sm font-semibold pb-1.5 transition hover:text-indigo-600 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:rounded-full after:bg-indigo-600  after:transition-[width] after:duration-300 hover:after:w-full"
               >
                 <a href={`#${item.link}`}>{item.label}</a>
               </li>
