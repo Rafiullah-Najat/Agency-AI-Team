@@ -1,7 +1,7 @@
 import assets from "../../public/image/assets";
 import Title from "./Title";
 
-export default function ConcatUs() {
+export default function ContactUS() {
   return (
     <section
       id="concat-us"

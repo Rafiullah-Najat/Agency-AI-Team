@@ -5,7 +5,7 @@ import Companies from "./components/Companies";
 import Services from "./components/Services";
 import OurWork from "./components/OurWork";
 import Team from "./components/Team";
-import ConcatUs from "./components/ConcatUs";
+import ContactUS from "./components/ContactUS";
 function App() {
   const [theme, setTheme] = useState("light");
 
@@ -21,7 +21,7 @@ function App() {
       <Services />
       <OurWork />
       <Team />
-      <ConcatUs />
+      <ContactUS />
     </div>
   );
 }
