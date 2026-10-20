@@ -4,7 +4,7 @@ import Title from "./Title";
 export default function ContactUS() {
   return (
     <section
-      id="concat-us"
+      id="contact-us"
       className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white mb-10"
     >
       <Title
