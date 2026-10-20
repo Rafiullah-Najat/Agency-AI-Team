@@ -93,15 +93,18 @@ export default function Navbar({ theme, setTheme }) {
               <BiMoon className="size-5" />
             )}
           </button>
-          <button
-            type="button"
-            className="group inline-flex h-8 sm:h-10 cursor-pointer items-center gap-2 rounded-full bg-indigo-600 pl-4 pr-1.5 text-[12px] sm:text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 active:translate-y-0 focus-visi focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-          >
-            <span>Connect</span>
-            <span className="grid size-5 sm:size-7 place-items-center rounded-full bg-white/10">
-              <IoIosArrowRoundForward className="size-5 transition-transform duration-200 group-hover:translate-x-0.5" />
-            </span>
-          </button>
+          <a href="#contact-us">
+            <button
+              type="button"
+              className="group inline-flex h-8 sm:h-10 cursor-pointer items-center gap-2 rounded-full bg-indigo-600 pl-4 pr-1.5 text-[12px] sm:text-sm font-semibold
+             text-white shadow-md shadow-indigo-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 active:translate-y-0 "
+            >
+              <span>Connect</span>
+              <span className="grid size-5 sm:size-7 place-items-center rounded-full bg-white/10">
+                <IoIosArrowRoundForward className="size-5 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </span>
+            </button>
+          </a>
 
           <button
             type="button"
