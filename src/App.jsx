@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import OurWork from "./components/OurWork";
 import Team from "./components/Team";
 import ContactUS from "./components/ContactUS";
+import Footer from "./components/Footer";
 function App() {
   const [theme, setTheme] = useState("light");
 
@@ -22,6 +23,7 @@ function App() {
       <OurWork />
       <Team />
       <ContactUS />
+      <Footer theme={theme} />
     </div>
   );
 }
