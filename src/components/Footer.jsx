@@ -56,6 +56,20 @@ export default function Footer({ theme }) {
           </div>
         </div>
       </div>
+      <div>
+        <hr className="border-gray-300 dark:border-gray-600 my-6" />
+
+        {/* footer bottom  */}
+        <div className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap">
+          <p>Copyright - 2026 - Najat - All right Reserved</p>
+          <div className="flex items-center justify-between gap-4">
+            <img src={assets.facebook_icon} alt="facebook_icon" />
+            <img src={assets.twitter_icon} alt="twitter_icon" />
+            <img src={assets.instagram_icon} alt="instagram_icon" />
+            <img src={assets.linkedin_icon} alt="linkedin_icon" />
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
