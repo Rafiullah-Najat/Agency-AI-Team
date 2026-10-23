@@ -24,6 +24,9 @@ function App() {
       <Team />
       <ContactUS />
       <Footer theme={theme} />
+
+      {/* Cosutome Cursor ring */}
+      <div></div>
     </div>
   );
 }
