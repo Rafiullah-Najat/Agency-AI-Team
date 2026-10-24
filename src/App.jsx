@@ -7,6 +7,8 @@ import OurWork from "./components/OurWork";
 import Team from "./components/Team";
 import ContactUS from "./components/ContactUS";
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
+
 function App() {
   const [theme, setTheme] = useState("light");
 
@@ -48,6 +50,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#f3f4f6] dark:bg-slate-950">
+      <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       <HeroSection />
       <Companies />

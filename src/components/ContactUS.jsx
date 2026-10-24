@@ -1,7 +1,30 @@
 import assets from "../../public/image/assets";
 import Title from "./Title";
-
+import toast from "react-hot-toast";
 export default function ContactUS() {
+  const onSubmit = async (params) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0c5e74bb-a1bb-4639-9ac4-062bf25a52eb");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
   return (
     <section
       id="contact-us"
@@ -16,6 +39,7 @@ export default function ContactUS() {
       <form
         action=""
         className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full "
+        onSubmit={onSubmit}
       >
         <div>
           <p className="mb-2 text-sm font-medium">Your name</p>
@@ -23,7 +47,7 @@ export default function ContactUS() {
             <img src={assets.person_icon} alt="perso_icon" />
             <input
               type="text"
-              name="text"
+              name="name"
               placeholder="Enter your name"
               className="w-full p-3 text-sm outline-none"
               required
