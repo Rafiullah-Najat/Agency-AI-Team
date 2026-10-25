@@ -1,4 +1,5 @@
 import assets from "../../public/image/assets.js";
+import { motion } from "motion/react";
 
 const { group_profile, hero_img, bgImage1, bgImage2 } = assets;
 export default function HeroSection() {
@@ -29,7 +30,13 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
-        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700/15 bg-white/60 py-2 pr-4 pl-2.5 shadow-lg shadow-slate-900/4 backdrop-blur-xl dark:border-white/15 dark:bg-slate-900/60">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          viewport={{ once: true }}
+          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700/15 bg-white/60 py-2 pr-4 pl-2.5 shadow-lg shadow-slate-900/4 backdrop-blur-xl dark:border-white/15 dark:bg-slate-900/60"
+        >
           <img
             className="h-7 rounded-full border-2 border-white/90 object-cover"
             src={group_profile}
@@ -39,27 +46,45 @@ export default function HeroSection() {
           <span className="text-[10px] font-semibold tracking-[-0.02em] text-slate-700 dark:text-slate-200 sm:text-sm">
             Trusted by 10k+ people
           </span>
-        </div>
+        </motion.div>
 
-        <h1 className="m-0 text-slate-900  font-semibold text-[clamp(1.5rem,5.5vw,12rem)] lg:leading-23 dark:text-white ">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="m-0 text-slate-900  font-semibold text-[clamp(1.5rem,5.5vw,12rem)] lg:leading-23 dark:text-white "
+        >
           <span className="block">Turning imagination into</span>
           <span className="block bg-linear-to-r from-indigo-600 via-blue-500 to-sky-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(92,126,255,0.12)]">
             digital impact
           </span>
-        </h1>
+        </motion.h1>
 
-        <p className="mx-auto text-[10px] mt-5 max-w-130 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg">
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          viewport={{ once: true }}
+          className="mx-auto text-[10px] mt-5 max-w-130 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg"
+        >
           Creating meaningful connections and turning big ideas into interactive
           digital experiences.
-        </p>
+        </motion.p>
 
-        <div className="relative mx-auto mt-10 w-[min(80vw,800px)] overflow-hidden rounded-[1.7rem] border border-slate-900/10 bg-blue-100 shadow-[0_25px_60px_rgba(80,100,140,0.12)] dark:border-white/10 dark:bg-slate-800 sm:mt-12 sm:w-[min(80vw,1200px)] ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          viewport={{ once: true }}
+          className="relative mx-auto mt-10 w-[min(80vw,800px)] overflow-hidden rounded-[1.7rem] border border-slate-900/10 bg-blue-100 shadow-[0_25px_60px_rgba(80,100,140,0.12)] dark:border-white/10 dark:bg-slate-800 sm:mt-12 sm:w-[min(80vw,1200px)] "
+        >
           <img
             className="h-75 w-full object-cover sm:h-[min(39vw,520px)]"
             src={hero_img}
             alt="hero-image"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
