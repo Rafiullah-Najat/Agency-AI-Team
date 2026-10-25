@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
+import { motion } from "motion/react";
+
 function MenuIcon({ open }) {
   return open ? (
     <svg
@@ -56,7 +58,10 @@ export default function Navbar({ theme, setTheme }) {
 
   return (
     <>
-      <section
+      <motion.section
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex justify-between items-center px-4 sm:px-12 lg:px-24  py-3 lg:py-5 border-b-2 border-b-gray-300
       sticky top-0 z-20 backdrop-blur-xl font-meduim bg-white/50 dark:bg-gray-900/70"
       >
@@ -132,7 +137,7 @@ export default function Navbar({ theme, setTheme }) {
             ))}
           </ul>
         </nav>
-      </section>
+      </motion.section>
     </>
   );
 }
