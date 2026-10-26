@@ -64,7 +64,7 @@ export default function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
           viewport={{ once: true }}
           className="mx-auto text-[10px] mt-5 max-w-130 text-base text-slate-700/75 dark:text-slate-300/80 sm:mt-6 sm:text-lg"
         >
@@ -74,8 +74,8 @@ export default function HeroSection() {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
           viewport={{ once: true }}
           className="relative mx-auto mt-10 w-[min(80vw,800px)] overflow-hidden rounded-[1.7rem] border border-slate-900/10 bg-blue-100 shadow-[0_25px_60px_rgba(80,100,140,0.12)] dark:border-white/10 dark:bg-slate-800 sm:mt-12 sm:w-[min(80vw,1200px)] "
         >
