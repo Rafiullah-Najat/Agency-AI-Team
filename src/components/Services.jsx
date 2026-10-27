@@ -1,6 +1,8 @@
 import assets from "../../public/image/assets.js";
 import Title from "./Title";
 import ServicesCard from "./ServicesCard";
+import { motion } from "motion/react";
+
 const servicesData = [
   {
     title: "Advrtising",
@@ -27,7 +29,11 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2, duration: 0.4 }}
       id="services"
       className="relative flex flex-col items-center gap-7 px-4 pt-30 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
     >
@@ -47,6 +53,6 @@ export default function Services() {
           <ServicesCard key={index} service={service} index={index} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

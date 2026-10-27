@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { motion } from "motion/react";
 
 export default function ServicesCard({ service, index }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -14,7 +15,11 @@ export default function ServicesCard({ service, index }) {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.3 }}
+      viewport={{ once: true }}
       className="relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl
     border border-gray-200 dark:border-gray-700 transition-colors shadow-2xl shadow-gray-100 dark:shadow-white/10"
       onMouseEnter={() => setVisible(true)}
@@ -46,6 +51,6 @@ export default function ServicesCard({ service, index }) {
           <p className="text-sm mt-2">{service.description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
