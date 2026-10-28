@@ -4,9 +4,9 @@ export default function Title({ title, description }) {
   return (
     <div className="z-10">
       <motion.h2
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.5 }}
+        transition={{ duration: 0.9, delay: 0.5 }}
         viewport={{ once: true }}
         className="text-3xl font-medium sm:text-[42px] text-center mb-5 text-gray-800 dark:text-white"
       >
@@ -15,7 +15,7 @@ export default function Title({ title, description }) {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
         viewport={{ once: true }}
         className="w-full px-9 sm:px-2 sm:max-w-lg text-center text-gray-500 dark:text-white/75 mb-6"
       >
