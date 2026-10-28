@@ -1,5 +1,5 @@
 import assets from "../../public/image/assets.js";
-
+import { motion } from "motion/react";
 import Title from "./Title";
 
 const WorkData = [
@@ -21,7 +21,11 @@ const WorkData = [
 ];
 export default function OurWork() {
   return (
-    <section
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
       id="our-work"
       className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
     >
@@ -31,7 +35,11 @@ export default function OurWork() {
       />
       <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {WorkData.map((work, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
             key={index}
             className="hover:scale-102 duration-500 transition-all cursor-pointer"
           >
@@ -45,9 +53,9 @@ export default function OurWork() {
             <p className="text-gray-600 dark:text-gray-300">
               {work.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
