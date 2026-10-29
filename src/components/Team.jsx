@@ -17,7 +17,13 @@ export default function Team() {
         }
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 1.1 }}
+        className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5"
+      >
         {teamData.map((member, index) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +45,7 @@ export default function Team() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

@@ -33,7 +33,13 @@ export default function OurWork() {
         title="Our latest work"
         description="From Sterategy to excution, we craft digital solutions that move your business forward."
       />
-      <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 1.1 }}
+        className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl"
+      >
         {WorkData.map((work, index) => (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -55,7 +61,7 @@ export default function OurWork() {
             </p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }
