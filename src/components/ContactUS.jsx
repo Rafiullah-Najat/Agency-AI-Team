@@ -1,6 +1,8 @@
 import assets from "../../public/image/assets";
 import Title from "./Title";
 import toast from "react-hot-toast";
+import { motion } from "motion/react";
+
 export default function ContactUS() {
   const onSubmit = async (params) => {
     event.preventDefault();
@@ -26,7 +28,11 @@ export default function ContactUS() {
     }
   };
   return (
-    <section
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
       id="contact-us"
       className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white mb-10"
     >
@@ -36,7 +42,11 @@ export default function ContactUS() {
           "From strategy to excution, we craft digital solutions that mover your business forward."
         }
       />
-      <form
+      <motion.form
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+        viewport={{ once: true }}
         action=""
         className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full "
         onSubmit={onSubmit}
@@ -84,7 +94,7 @@ export default function ContactUS() {
           Submit{" "}
           <img src={assets.arrow_icon} alt="arrow_icon" className="w-4" />
         </button>
-      </form>
-    </section>
+      </motion.form>
+    </motion.section>
   );
 }
