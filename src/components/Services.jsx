@@ -48,11 +48,17 @@ export default function Services() {
         alt=""
         className="absolute object-cover sm:w-1/2 -top-18 sm:-top-30 lg:-top-28 sm:left-20 dark:opacity-0"
       />
-      <div className="flex flex-col md:grid  grid-cols-2">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="flex flex-col md:grid  grid-cols-2"
+      >
         {servicesData.map((service, index) => (
           <ServicesCard key={index} service={service} index={index} />
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

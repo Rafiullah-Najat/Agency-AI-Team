@@ -18,7 +18,7 @@ export default function ServicesCard({ service, index }) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.3 }}
+      transition={{ duration: 0.8, delay: index * 0.4 }}
       viewport={{ once: true }}
       className="relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl
     border border-gray-200 dark:border-gray-700 transition-colors shadow-2xl shadow-gray-100 dark:shadow-white/10"
