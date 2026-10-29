@@ -1,11 +1,24 @@
 import assets from "../../public/image/assets";
+import { motion } from "motion/react";
 
 export default function Footer({ theme }) {
   return (
-    <footer className="relative flex flex-col items-center gap-7 px-4 pt-30 bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40">
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="relative flex flex-col items-center gap-7 px-4 pt-30 bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
+    >
       {/* top footer  */}
       <div className="flex justify-between lg:items-center max-lg:flex-col gap-10">
-        <div className="space-y-5 text-sm text-gray-700 dark:text-gray-400">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="space-y-5 text-sm  text-gray-700 dark:text-gray-400"
+        >
           <img
             src={`./image/${theme === "dark" ? "logo_dark" : "logo"}.svg`}
             alt="logo"
@@ -37,8 +50,14 @@ export default function Footer({ theme }) {
               </a>
             </li>
           </ul>
-        </div>
-        <div className="text-gray-600 dark:text-gray-400">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-gray-600 dark:text-gray-400"
+        >
           <h3 className="font-semibold">Subscribe to our newsletter</h3>
           <p className="text-sm mt-2 mb-6">
             The latest news, articles, and resources , sent your inbox weekly.
@@ -54,13 +73,19 @@ export default function Footer({ theme }) {
               Subscribwe
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div>
         <hr className="border-gray-300 dark:border-gray-600 my-6" />
 
         {/* footer bottom  */}
-        <div className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap"
+        >
           <p>Copyright - 2026 - Najat - All right Reserved</p>
           <div className="flex items-center justify-between gap-4">
             <img src={assets.facebook_icon} alt="facebook_icon" />
@@ -68,8 +93,8 @@ export default function Footer({ theme }) {
             <img src={assets.instagram_icon} alt="instagram_icon" />
             <img src={assets.linkedin_icon} alt="linkedin_icon" />
           </div>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
