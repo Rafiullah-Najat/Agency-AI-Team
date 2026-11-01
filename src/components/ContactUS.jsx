@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { motion } from "motion/react";
 
 export default function ContactUS() {
-  const onSubmit = async (params) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
@@ -73,7 +73,7 @@ export default function ContactUS() {
               name="email"
               placeholder="Enter your email"
               className="w-full p-3 text-sm outline-none"
-              requireds
+              required
             />
           </div>
         </div>
