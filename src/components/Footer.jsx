@@ -8,10 +8,13 @@ export default function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative flex flex-col items-center gap-7 px-4 pt-15 bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
+      className="relative flex flex-col items-center gap-7 px-4 pt-15 overflow-x-clip bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
     >
       {/* top footer  */}
-      <div className="flex justify-between lg:items-center max-lg:flex-col gap-10">
+      <div
+        className="flex w-full max-w-6xl justify-between
+  lg:items-center max-lg:flex-col gap-10"
+      >
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +31,7 @@ export default function Footer({ theme }) {
             From strategy to excution, We craft digital solutions that move your
             bussinis forward.
           </p>
-          <ul className="flex gap-8">
+          <ul className="flex flex-wrap gap-x-5 gap-y-3">
             <li>
               <a href="#hero" className="hover:text-indigo-600">
                 Home
@@ -66,7 +69,7 @@ export default function Footer({ theme }) {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full p-3 text-sm outline-none rounded
+              className="w-full min-w-0 p-3 text-sm outline-none rounded
            dark:text-gray-200 bg-transparent border border-gray-300 dark:border-gray-500"
             />
             <button className="bg-indigo-500 rounded text-white px-6">
