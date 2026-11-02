@@ -1,4 +1,4 @@
-import assets from "../../public/image/assets";
+import assets from "../../public/image/assets.js";
 import { motion } from "motion/react";
 
 export default function Footer({ theme }) {
@@ -23,9 +23,9 @@ export default function Footer({ theme }) {
           className="space-y-5 text-sm  text-gray-700 dark:text-gray-400"
         >
           <img
-            src={`./image/${theme === "dark" ? "logo_dark" : "logo"}.svg`}
+            src={theme === "dark" ? assets.logo_dark : assets.logo}
             alt="logo"
-            className="w-32 sm:w-44"
+            className="w-24 sm:w-32 lg:w-38"
           />
           <p>
             From strategy to excution, We craft digital solutions that move your

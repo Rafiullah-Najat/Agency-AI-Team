@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
+import assets from "../../public/image/assets.js";
 import { motion } from "motion/react";
 
 function MenuIcon({ open }) {
@@ -67,9 +67,9 @@ export default function Navbar({ theme, setTheme }) {
       >
         <div>
           <img
-            src={`./image/${theme === "dark" ? "logo_dark" : "logo"}.svg`}
+            src={theme === "dark" ? assets.logo_dark : assets.logo}
             alt="logo"
-            className="w-24 sm:w-32 lg:w-38 "
+            className="w-24 sm:w-32 lg:w-38"
           />
         </div>
 
