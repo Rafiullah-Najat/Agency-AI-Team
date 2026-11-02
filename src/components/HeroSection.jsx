@@ -15,7 +15,7 @@ export default function HeroSection() {
         <img
           className="h-full w-full object-cover opacity-90"
           src={bgImage1}
-          alt=""
+          alt="background-img1"
         />
       </div>
       <div
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <img
           className="h-full w-full object-contain sm:object-cover opacity-90"
           src={bgImage2}
-          alt=""
+          alt="background-img2"
         />
       </div>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           <img
             className="h-7 rounded-full border-2 border-white/90 object-cover"
             src={group_profile}
-            alt=""
+            alt="group-profile photo"
           />
 
           <span className="text-[10px] font-semibold tracking-[-0.02em] text-slate-700 dark:text-slate-200 sm:text-sm">
