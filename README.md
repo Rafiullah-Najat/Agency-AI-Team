@@ -32,6 +32,8 @@ Built with React and Vite, the project focuses on clean UI design, responsive la
 - **Toast Notifications:** Provides feedback for user interactions.
 - **Reusable Components:** Organized React components for maintainability.
 
+- **Demo:** agency-ai-team.vercel.app
+
 ## Tech Stack
 
 | Technology | Purpose |
