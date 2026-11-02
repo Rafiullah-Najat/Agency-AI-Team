@@ -8,7 +8,7 @@ export default function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative flex flex-col items-center gap-7 px-4 pt-30 bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
+      className="relative flex flex-col items-center gap-7 px-4 pt-15 bg-indigo-100/10 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
     >
       {/* top footer  */}
       <div className="flex justify-between lg:items-center max-lg:flex-col gap-10">

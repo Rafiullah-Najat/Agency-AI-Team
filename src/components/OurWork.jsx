@@ -27,7 +27,7 @@ export default function OurWork() {
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2 }}
       id="our-work"
-      className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
+      className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-15 text-gray-700 dark:text-white"
     >
       <Title
         title="Our latest work"
@@ -52,7 +52,7 @@ export default function OurWork() {
             <img
               src={work.image}
               alt={work.title}
-              className="w-full rounded-xl"
+              className=" h-60 w-full rounded-xl"
             />
 
             <h3 className=" mt-3 mb-2 text-lg font-bold ">{work.title}</h3>

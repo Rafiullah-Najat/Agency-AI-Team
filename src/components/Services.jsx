@@ -35,7 +35,7 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2, duration: 0.4 }}
       id="services"
-      className="relative flex flex-col items-center gap-7 px-4 pt-30 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
+      className="relative flex flex-col items-center gap-7 px-4 pt-15 text-gray-700 dark:text-white sm:px-12 lg:px-24 xl:px-40"
     >
       <Title
         title={"How can we help you?"}
